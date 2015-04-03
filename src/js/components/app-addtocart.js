@@ -1,13 +1,13 @@
 /** @jsx React.DOM */
 var React = require('react');
 var AppActions = require('../actions/app-actions.js');
-var APP =
+var AddToCart =
   React.createClass({
     handleClick:function(){
-      AppActions.addItem('this is the item');
+      AppActions.addItem(this.props.item);
     },
     render:function(){
-      return <h1 onClick={this.handleClick}>MY FLUX APP</h1>
+      return <button onClick={this.handleClick}>Add To cart</button>
     }
   });
-module.exports = APP;
+module.exports = AddToCart;
